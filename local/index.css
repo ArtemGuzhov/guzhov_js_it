@@ -127,7 +127,7 @@ tr:hover {
 }
 
 .pagination_item:hover {
-  background-color: rgba(0, 191, 255, 0.4);
+  background-color: #00bfff66;
   color: #ffffff;
   border-color: #ffffff;
   transition: 500ms;
@@ -161,7 +161,7 @@ form::after {
   color: #222;
   font-size: 0.9rem;
   font-family: Mukta, sans-serif;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   vertical-align: start;
