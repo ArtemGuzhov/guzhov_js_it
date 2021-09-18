@@ -763,7 +763,7 @@ const createRows = () => {
       const p = document.createElement('p')
       p.className = 'status'
       p.style.background = selectColor(user.eyeColor)
-      p.style.color = '#fff'
+      p.style.color = selectColor(user.eyeColor)
       p.id = user.id + 'e'
       td4.style.display = 'table-cell'
       p.appendChild(document.createTextNode(user.eyeColor))
@@ -906,6 +906,7 @@ const updateHandler = (event) => {
     document.getElementById(id + 'e').innerText = eyeColor
     document.getElementById(id + 'e').style.backgroundColor =
       selectColor(eyeColor)
+    document.getElementById(id + 'e').style.color = selectColor(eyeColor)
 
     // Отображаем сообщение об успехе использую свойство display
     message.style.display = 'initial'
