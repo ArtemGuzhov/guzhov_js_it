@@ -1103,6 +1103,11 @@ const showHideColumn = (column, elem, visible) => {
         display
     }
   }
+
+  // Если все колонки были скрыты, то отображаем все
+  if (checkVisbile()) {
+    visibleAll()
+  }
 }
 
 // Функция показа всех скрытых колонок
@@ -1111,6 +1116,25 @@ const visibleAll = () => {
   showHideColumn(3, 1, true)
   showHideColumn(5, 2, true)
   showHideColumn(7, 3, true)
+}
+
+// Функция проверки на скрытие все колонок
+const checkVisbile = () => {
+  const visible_column1 = document.getElementsByTagName('th')[0].style.display
+  const visible_column2 = document.getElementsByTagName('th')[1].style.display
+  const visible_column3 = document.getElementsByTagName('th')[2].style.display
+  const visible_column4 = document.getElementsByTagName('th')[3].style.display
+
+  if (
+    visible_column1 === 'none' &&
+    visible_column2 === 'none' &&
+    visible_column3 === 'none' &&
+    visible_column4 === 'none'
+  ) {
+    return true
+  } else {
+    return false
+  }
 }
 
 // Получаем данные (default = (1 - 10))
